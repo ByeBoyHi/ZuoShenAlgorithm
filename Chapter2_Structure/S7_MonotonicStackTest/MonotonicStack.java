@@ -2,6 +2,8 @@ package Chapter2_Structure.S7_MonotonicStackTest;
 
 import java.util.Stack;
 
+
+// 单调栈
 public class MonotonicStack<E extends Comparable<E>> {
     Stack<Integer> stack;
     E[] es;

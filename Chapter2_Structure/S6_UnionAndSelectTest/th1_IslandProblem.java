@@ -1,5 +1,6 @@
 package Chapter2_Structure.S6_UnionAndSelectTest;
 
+// 并查集
 public class th1_IslandProblem {
     // Q1：一个二维数组，有多少1连在一起，算一个岛，斜着不算，一个单独的1也算一个岛，返回岛的数量
     // F1：不使用并查集的解法
