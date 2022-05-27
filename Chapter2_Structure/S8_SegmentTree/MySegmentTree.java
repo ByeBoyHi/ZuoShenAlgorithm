@@ -210,7 +210,7 @@ public class MySegmentTree {
         }
     }
 
-
+    // 对isAddVal的记录进行清理
     private void funcAdd(int curPoint, int start, int mid, int tail) {
         segment[curPoint * 2] += isAddVal[curPoint] * (mid - start + 1);   // 左孩子的值进行总和更新
         segment[curPoint * 2 + 1] += isAddVal[curPoint] * (tail - mid);   // 有孩子的值进行总和更新
@@ -221,6 +221,7 @@ public class MySegmentTree {
         isAddVal[curPoint] = 0;               // 清除当前节点的标记
     }
 
+    // 对isSetVal的记录进行清理
     private void funcSet(int curPoint, int left, int mid, int right) {
         segment[2 * curPoint] = isSetVal[curPoint] * (mid - left + 1);
         segment[2 * curPoint + 1] = isSetVal[curPoint] * (right - mid);
@@ -229,4 +230,5 @@ public class MySegmentTree {
 
         isSetVal[curPoint] = 0;
     }
+
 }
